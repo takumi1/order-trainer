@@ -1,0 +1,30 @@
+.wrap {
+    background: url("../../public/images/main-background.png") no-repeat;
+    background-size: cover;
+    height: 810px;
+}
+
+.firstRange, .secondRange {
+    -webkit-appearance: none;
+    width: 400px;
+    background-color: #FFD748;
+    border-radius: 10px;
+}
+
+.firstRange::-webkit-slider-thumb,
+.secondRange::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    background-color: #104987;
+    width: 23px;
+    height: 23px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.firstRange {
+    margin-bottom: 3rem;
+}
+.secondRange {
+    width: 600px;
+
+}
