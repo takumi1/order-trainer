@@ -47,11 +47,11 @@ const Game = () => {
                 if (item === 4) return '-.5';
                 break;
             case 'toys':
-                if (item === 0) return '1.5';
-                if (item === 1) return '1';
-                if (item === 2) return '2';
-                if (item === 3) return '1';
-                if (item === 4) return '1.5';
+                if (item === 0) return '0';
+                if (item === 1) return '0';
+                if (item === 2) return '1.3';
+                if (item === 3) return '.3';
+                if (item === 4) return '.5';
                 break;
             case 'tulips':
                 if (item === 0) return '1';
@@ -79,11 +79,11 @@ const Game = () => {
                 if (item === 4) return '-.4';
                 break;
             case 'toys':
-                if (item === 0) return '-1.4';
-                if (item === 1) return '-1.4';
-                if (item === 2) return '-1.4';
-                if (item === 3) return '-1.4';
-                if (item === 4) return '-1.4';
+                if (item === 0) return '1';
+                if (item === 1) return '1';
+                if (item === 2) return '1';
+                if (item === 3) return '1';
+                if (item === 4) return '1';
                 break;
             case 'tulips':
                 if (item === 0) return '3';
@@ -95,7 +95,7 @@ const Game = () => {
     }
 
     const randomiseTheme = () => {
-      let res = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+   let res = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
         switch (res) {
             case 1:
                 return 'coins';
@@ -340,37 +340,37 @@ const Game = () => {
                         backgroundImage: `${answerBackground[5]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 5)}
+                    }} onDragOver={(event) => answerBackground.length === 5 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 5)}
                          className="answer">{answerBackground[5] ? answerList[5] : ''}</div>
                     <div id={answerList[4]} style={{
                         backgroundImage: `${answerBackground[4]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 4)}
+                    }} onDragOver={(event) => answerBackground.length === 4 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 4)}
                          className="answer">{answerBackground[4] ? answerList[4] : ''}</div>
                     <div id={answerList[3]} style={{
                         backgroundImage: `${answerBackground[3]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 3)}
+                    }} onDragOver={(event) => answerBackground.length === 3 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 3)}
                          className="answer">{answerBackground[3] ? answerList[3] : ''}</div>
                     <div id={answerList[2]} style={{
                         backgroundImage: `${answerBackground[2]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 2)}
+                    }} onDragOver={(event) => answerBackground.length === 2 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 2)}
                          className="answer">{answerBackground[2] ? answerList[2] : ''}</div>
                     <div id={answerList[1]} style={{
                         backgroundImage: `${answerBackground[1]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 1)}
+                    }} onDragOver={(event) => answerBackground.length === 1 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 1)}
                          className="answer">{answerBackground[1] ? answerList[1] : ''}</div>
                     <div id={answerList[0]} style={{
                         backgroundImage: `${answerBackground[0]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 0)}
+                    }} onDragOver={(event) => answerBackground.length === 0 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 0)}
                          className="answer">{answerBackground[0] ? answerList[0] : ''}</div>
                 </div>}
 
