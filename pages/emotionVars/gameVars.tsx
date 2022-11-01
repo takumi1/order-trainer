@@ -1,3 +1,4 @@
+import React from 'react';
 import {css} from '@emotion/css'
 
 export const numArray = css`
@@ -169,3 +170,12 @@ export const item4Text = css`font-size: 56px;
       cursor: move;
       padding: 40px 40px;
       margin-top: 2rem;`
+const GameVars = () => {
+    return (
+        <div>
+
+        </div>
+    );
+};
+
+export default GameVars;

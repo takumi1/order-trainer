@@ -1,3 +1,4 @@
+import React from 'react';
 import {css} from '@emotion/css'
 
 export const wrapperStyle = css`
@@ -69,3 +70,13 @@ export const playButtonStyle = css`
   margin-top: 5rem;
   cursor: pointer;
 `
+
+const MainMenuVars = () => {
+    return (
+        <div>
+
+        </div>
+    );
+};
+
+export default MainMenuVars;
