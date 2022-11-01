@@ -214,7 +214,7 @@ const Game = () => {
         showWin ? audio.src = '/sounds/5.mp3' : '';
         audio.autoplay = true;
     }, [showWin])
-
+    console.log(answerBackground.length)
     return (
 
         <div className={theme}>
@@ -301,37 +301,37 @@ const Game = () => {
                         backgroundImage: `${answerBackground[0]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 0)}
+                    }} onDragOver={(event) => answerBackground.length === 0 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 0)}
                          className="answer">{answerBackground[0] ? answerList[0] : ''}</div>
                     <div id={answerList[1]} style={{
                         backgroundImage: `${answerBackground[1]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 1)}
+                    }} onDragOver={(event) => answerBackground.length === 1 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 1)}
                          className="answer">{answerBackground[1] ? answerList[1] : ''}</div>
                     <div id={answerList[2]} style={{
                         backgroundImage: `${answerBackground[2]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 2)}
+                    }} onDragOver={(event) => answerBackground.length === 2 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 2)}
                          className="answer">{answerBackground[2] ? answerList[2] : ''}</div>
                     <div id={answerList[3]} style={{
                         backgroundImage: `${answerBackground[3]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 3)}
+                    }} onDragOver={(event) => answerBackground.length === 3 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 3)}
                          className="answer">{answerBackground[3] ? answerList[3] : ''}</div>
                     <div id={answerList[4]} style={{
                         backgroundImage: `${answerBackground[4]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 4)}
+                    }} onDragOver={(event) => answerBackground.length === 4 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 4)}
                          className="answer">{answerBackground[4] ? answerList[4] : ''}</div>
                     <div id={answerList[5]} style={{
                         backgroundImage: `${answerBackground[5]}`,
                         backgroundSize: 'contain',
                         backgroundRepeat: 'no-repeat'
-                    }} onDragOver={(event) => event.preventDefault()} onDrop={(e) => onDrop(e, 5)}
+                    }} onDragOver={(event) => answerBackground.length === 5 ? event.preventDefault() : ""} onDrop={(e) => onDrop(e, 5)}
                          className="answer">{answerBackground[5] ? answerList[5] : ''}</div>
 
                 </div> :
