@@ -23,11 +23,11 @@ import {
 const Game = () => {
     const router = useRouter();
     const query = router.query;
-    const itemsQuantity = query.quantity;
+    const itemsQuantity: any = query.quantity;
     const itemsType = typeof query.arrayType === 'string' ? +query.arrayType : query.arrayType;
     const itemsOrder = query.activeOrder;
-    const [range, setRange] = useState(itemsType)
-    const [theme, setTheme] = useState<string>('tulips')
+    const [range, setRange] = useState<any>(itemsType)
+    const [theme, setTheme] = useState<any>('tulips')
     const [order, setOrder] = useState(itemsOrder)
 
     const chooseSymbolMarginsX = (theme: string, item: number) => {
@@ -155,10 +155,10 @@ const Game = () => {
                 return calcArray(q, 999, 100)
         }
     }
-    let itemArray;
+    let itemArray: any;
     let answerArray;
 
-    const [answerList, setAnswerList] = useState([])
+    const [answerList, setAnswerList] = useState<any>([])
     const [itemsList, setItemsList] = useState([])
 
     useEffect(() => {
@@ -175,20 +175,20 @@ const Game = () => {
     let currentDragging = '';
     let currentBackground: number;
 
-    const [finishedItems, setFinishedItems] = useState<number[]>([])
-    const dragStart = (e: React.ChangeEvent<HTMLInputElement>, item: number) => {
+    const [finishedItems, setFinishedItems] = useState<any[]>([])
+    const dragStart = (e: any, item: number) => {
         currentDragging = e.target.innerText;
         currentBackground = item;
         let audio = new Audio();
         audio.src = '/sounds/2.mp3';
         audio.autoplay = true;
     };
-    const [answerBackground, setAnswerBackground] = useState([])
+    const [answerBackground, setAnswerBackground] = useState<any[]>([])
     const [dropchange, setDropchange] = useState(0)
     const [showWin, setShowWin] = useState(false)
     let spliceAnswerArr: string[] = answerBackground;
 
-    const onDrop = (e: React.ChangeEvent<HTMLInputElement>, id: number) => {
+    const onDrop = (e: any, id: number) => {
         let okplayed = false
         if (e.target.id === currentDragging) {
             theme === 'tulips' ? spliceAnswerArr.splice(id, 0, `url(/images/themes/${theme}/answerItem${currentBackground}.png)`) : spliceAnswerArr.splice(id, 0, `url(/images/themes/${theme}/item${currentBackground}.png)`);
@@ -426,7 +426,7 @@ const Game = () => {
                     </div>
                     : ''
             }
-            <audio src="/sounds/maintheme.mp3" autoPlay="autoplay"></audio>
+            <audio src="/sounds/maintheme.mp3" autoPlay></audio>
         </div>
     );
 };

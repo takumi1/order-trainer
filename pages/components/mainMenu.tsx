@@ -12,19 +12,19 @@ const MainMenu = () => {
     const [quantity, setQuantity] = useState(1)
     const [arrayType, setArrayType] = useState(1)
     const [activeOrder, setActiveOrder] = useState('up')
-    const changeQuantity = (e) => {
+    const changeQuantity = (e: any) => {
         setQuantity(e.target.value)
         let audio = new Audio();
         audio.src = '/sounds/4.mp3';
         audio.autoplay = true;
     };
-    const changeType = (e) => {
+    const changeType = (e: any) => {
         setArrayType(e.target.value)
         let audio = new Audio();
         audio.src = '/sounds/4.mp3';
         audio.autoplay = true;
     };
-    const orderHandler = (e) => {
+    const orderHandler = (e: any) => {
         setActiveOrder(e.target.name)
         let audio = new Audio();
         audio.src = '/sounds/4.mp3';
