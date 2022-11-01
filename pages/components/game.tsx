@@ -214,7 +214,6 @@ const Game = () => {
         showWin ? audio.src = '/sounds/5.mp3' : '';
         audio.autoplay = true;
     }, [showWin])
-    console.log(answerBackground.length)
     return (
 
         <div className={theme}>
